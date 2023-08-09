@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import ChatMessage from '../../ui/ChatMessage';
+import ChatMessage from '../ui/ChatMessage';
 import {
     bigTextMobile,
     headingTextDesktop,
@@ -22,7 +22,7 @@ export default function AboutSlider() {
             <h1 className={`text-white  ${bigTextMobile} ${headingTextDesktop}`}>
                 Case Club - это
             </h1>
-            <ChatMessage classes={`rounded-tl-none ${bigTextMobile} ${headingTextDesktop} font-semibold mt-4`}>{options[current]}</ChatMessage>
+            <ChatMessage classes={`bg-white rounded-tl-none ${bigTextMobile} ${headingTextDesktop} font-semibold mt-4`}>{options[current]}</ChatMessage>
             <div className='mt-4 xl:mt-16 flex'>
                 <div>
                     <p className={`text-white ${mediumTextMobile} ${mediumTextDesktop} w-fit`}>Проводим кейс-чемпионаты</p>

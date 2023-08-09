@@ -1,8 +1,8 @@
 import React from 'react';
-import RoundCard from '../../ui/RoundCard';
-import ChatMessage from '../../ui/ChatMessage';
+import RoundCard from '../ui/RoundCard';
+import ChatMessage from '../ui/ChatMessage';
 import { ReactComponent as SettingsEmoji } from '../../assets/img/icons/settings-emoji.svg';
-import { ReactComponent as BriefcaseEmoji } from '../../assets/img/icons/briefcase-2770 1.svg';
+import { ReactComponent as BriefcaseEmoji } from '../../assets/img/icons/briefcase-emoji.svg';
 import { bigTextDesktop } from '../../utils';
 
 export default function MainCardDesktop() {
@@ -10,7 +10,7 @@ export default function MainCardDesktop() {
         <RoundCard classes="bg-blue xl:py-16 xl:px-28 xl:row-span-8">
             <p className={`w-fit text-white ${bigTextDesktop} font-semibold `}>
                 Учим студентов{' '}
-                <ChatMessage classes="rounded-tr-none">
+                <ChatMessage classes="bg-white rounded-tr-none">
                     <SettingsEmoji
                         width={50}
                         height={50}
@@ -23,7 +23,7 @@ export default function MainCardDesktop() {
             >
                 так, как это делают
             </p>
-            <ChatMessage classes="mt-12 rounded-tl-none">
+            <ChatMessage classes="bg-white mt-12 rounded-tl-none">
                 <span
                     className={`${bigTextDesktop} font-semibold text-black mr-4 leading-3`}
                 >

@@ -1,12 +1,12 @@
 import React from 'react';
-import Section from '../../ui/Section';
+import Section from '../ui/Section';
 import { bigTextDesktop, bigTextMobile } from '../../utils';
-import DoublePillButton from '../../ui/DoublePillButton';
+import DoublePillButton from '../ui/DoublePillButton';
 import ProjectCard from './ProjectCard';
 import AlfaBankPng from '../../assets/img/logos/AlfaBank.png';
 import BeelinePng from '../../assets/img/logos/Beeline.png';
 import ProjectCardIcon from './ProjectCardIcon';
-import PillButton from '../../ui/PillButton';
+import PillButton from '../ui/PillButton';
 
 export default function OurProjects() {
     const alphaIcon = <ProjectCardIcon imgSrc={AlfaBankPng} classes='bg-white ml-4'/>;

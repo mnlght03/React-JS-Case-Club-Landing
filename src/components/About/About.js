@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutSlider from './AboutSlider';
 import AboutPills from './AboutPills';
-import Section from '../../ui/Section';
+import Section from '../ui/Section';
 
 export default function About() {
     const aboutPillsItems = [
@@ -10,7 +10,7 @@ export default function About() {
     ]
 
     return (
-        <Section bgColor='bg-blue' rounded topRoundMargin classes='bg-blue overflow-visible'>
+        <Section bgColor='bg-blue' rounded topRoundMargin>
             <AboutSlider />
             <AboutPills items={aboutPillsItems[0]} classes='mt-12 xl:mt-24' />
             <AboutPills items={aboutPillsItems[1]} classes='mt-4' />

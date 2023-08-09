@@ -3,9 +3,11 @@ import Header from './components/Header/Header';
 import { GlobalContext } from './context';
 import { isDesktopPredicate } from './utils';
 import Hero from './components/Hero';
-import ChronoLine from './ui/ChronoLine';
+import ChronoLine from './components/ui/ChronoLine';
 import About from './components/About';
 import OurProjects from './components/OurProjects';
+import Partners from './components/Partners';
+import CurrentProjects from './components/CurrentProjects';
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
             <ChronoLine startDate={'2012'} endDate={'2022'}/>
             <About />
             <OurProjects />
+            <Partners />
+            <CurrentProjects />
         </GlobalContext.Provider>
     );
 }

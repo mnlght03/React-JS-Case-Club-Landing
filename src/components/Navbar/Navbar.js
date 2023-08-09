@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../../context';
-import MobileNavButton from '../../ui/MobileNavButton';
+import MobileNavButton from '../ui/MobileNavButton';
 
 export default function Navbar({ navItems, ...props }) {
     const { isDesktop } = useContext(GlobalContext);

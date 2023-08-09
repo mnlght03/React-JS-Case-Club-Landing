@@ -10,6 +10,7 @@ export default function AboutSliderCounter({
         <div className={`${classes}`}>
             {[...Array(total).keys()].map((i) => (
                 <span
+                    key={i}
                     className={`inline-block relative w-16 xl:w-24 h-[2px] bg-white/40 rounded-sm ${
                         i !== 0 ? 'ml-2' : ''
                     }

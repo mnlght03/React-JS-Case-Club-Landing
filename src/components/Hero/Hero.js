@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 import { GlobalContext } from '../../context';
-import RoundCard from '../../ui/RoundCard';
+import RoundCard from '../ui/RoundCard';
 import { ReactComponent as ArrowRightIcon } from '../../assets/img/icons/arrow-right.svg';
 import { ReactComponent as PlusIcon } from '../../assets/img/icons/plus.svg';
 import { ReactComponent as StarIcon } from '../../assets/img/icons/star.svg';
 
-import Section from '../../ui/Section';
+import Section from '../ui/Section';
 import MainCardDesktop from './MainCardDesktop';
 import MainCardMobile from './MainCardMobile';
 import { textDesktop, textMobile } from '../../utils';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { smallTextDesktop } from '../../utils';
-import Button from '../../ui/Button';
+import Button from '../ui/Button';
 
 export default function ProjectCaseDesktop({
     caseKey,
@@ -11,7 +11,6 @@ export default function ProjectCaseDesktop({
     border = false,
     classes = ''
 }) {
-    console.log(caseKey);
     return (
         <div className={`w-full flex items-center py-8 ${border ? 'border-solid border-t-2 border-white/40' : ''} ${classes}`}>
             <span className="flex items-center justify-center text-white text-lg  block w-12 h-12 rounded-full border-solid border-white/40 border-2">

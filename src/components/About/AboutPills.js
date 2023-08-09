@@ -1,7 +1,7 @@
 import React from 'react';
-import PillButton from '../../ui/PillButton';
+import PillButton from '../ui/PillButton';
 
-export default function AboutPills({ items, classes = '', ...props }) {
+export default function AboutPills({ items, classes = '' }) {
     items = items.length > 8 ? items : [...items, ...items];
 
     return (

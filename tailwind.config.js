@@ -12,6 +12,8 @@ module.exports = {
             light_black: '#171717',
             green: '#73D17E',
             grey: '#1F222C',
+            beige: '#F7F7F7',
+            orange: '#EF7F2B',
         },
         extend: {},
     },

@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import Navbar from '../Navbar';
-import PillButton from '../../ui/PillButton';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { GlobalContext } from '../../context';
-import Section from '../../ui/Section';
+import Section from '../ui/Section';
+import { PartnersButton } from '../Partners';
 
 export default function Header() {
     const navItems = [
@@ -23,11 +23,7 @@ export default function Header() {
             <header className="flex w-full items-center justify-between">
                 <Logo width={isDesktop ? 195 : 130} height={isDesktop ? 65 : 40} />
                 <Navbar navItems={navItems} />
-                {isDesktop && (
-                    <PillButton classes="text-black bg-white font-semibold">
-                        Стать партнёром
-                    </PillButton>
-                )}
+                {isDesktop && <PartnersButton />}
             </header>
         </Section>
     );
