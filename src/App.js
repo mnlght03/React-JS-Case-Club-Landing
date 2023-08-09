@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react';
+import Header from './components/Header';
+import { GlobalContext } from './context';
+import { isDesktopPredicate } from './utils';
+import Hero from './components/Hero';
+import ChronoLine from './ui/ChronoLine';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [isDesktop, setIsDesktop] = useState(isDesktopPredicate());
+    
+    const updateDesktopState = () => setIsDesktop(isDesktopPredicate());
+
+    useEffect(() => {
+        window.addEventListener('resize', updateDesktopState);
+        return () => window.removeEventListener('resize', updateDesktopState);
+    });
+
+    return (
+        <GlobalContext.Provider value={{
+            isDesktop,
+        }}>
+            <Header />
+            <Hero />
+            <ChronoLine startDate={'2012'} endDate={'2022'}/>
+            <div className='h-screen'></div>
+        </GlobalContext.Provider>
+    );
 }
 
 export default App;
