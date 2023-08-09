@@ -6,7 +6,7 @@ export default function Section({
     rounded = false,
     topRoundMargin = false,
     roundFill = 'bg-black',
-    children,
+    children = null,
     ...props
 }) {
     return (

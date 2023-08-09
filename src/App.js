@@ -5,6 +5,7 @@ import { isDesktopPredicate } from './utils';
 import Hero from './components/Hero';
 import ChronoLine from './ui/ChronoLine';
 import About from './components/About';
+import OurProjects from './components/OurProjects';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Hero />
             <ChronoLine startDate={'2012'} endDate={'2022'}/>
             <About />
+            <OurProjects />
         </GlobalContext.Provider>
     );
 }
