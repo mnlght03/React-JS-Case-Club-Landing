@@ -30,6 +30,13 @@ module.exports = {
             'border-white',
             'border-blue',
             'border-black',
+            'xl:text-7xl',
+            'text-3xl',
+            'xl:text-6xl',
+            'text-xl',
+            'xl:text-[42px]',
+            'text-lg',
+            'xl:text-3xl',
         ],
     },
 };

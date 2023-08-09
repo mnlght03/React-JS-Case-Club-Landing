@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { GlobalContext } from '../context';
-import MobileNavButton from '../ui/MobileNavButton';
+import { GlobalContext } from '../../context';
+import MobileNavButton from '../../ui/MobileNavButton';
 
 export default function Navbar({ navItems, ...props }) {
     const { isDesktop } = useContext(GlobalContext);
@@ -10,11 +10,11 @@ export default function Navbar({ navItems, ...props }) {
         <div>
             {!isHidden && (
                 <nav {...props}>
-                    {navItems.map((item) => (
+                    {navItems.map((item, i) => (
                         <a
-                            className={`text-white ${item.key == 1 ? '' : 'ml-12'}`}
+                            className={`text-white ${i === 0 ? '' : 'ml-12'} hover:underline`}
                             href={item.href}
-                            key={item.key}
+                            key={i}
                         >
                             {item.text}
                         </a>

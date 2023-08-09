@@ -1,16 +1,16 @@
 import { useContext } from 'react';
-import Navbar from './Navbar';
-import PillButton from '../ui/PillButton';
-import { ReactComponent as Logo } from '../assets/logo.svg';
-import { GlobalContext } from '../context';
-import Section from '../ui/Section';
+import Navbar from '../Navbar';
+import PillButton from '../../ui/PillButton';
+import { ReactComponent as Logo } from '../../assets/logo.svg';
+import { GlobalContext } from '../../context';
+import Section from '../../ui/Section';
 
 export default function Header() {
     const navItems = [
-        { text: 'О нас', href: '#', key: 1 },
-        { text: 'Кейсы', href: '#', key: 2 },
-        { text: 'Текущие проекты', href: '#', key: 3 },
-        { text: 'Контакты', href: '#', key: 4 },
+        { text: 'О нас', href: '#' },
+        { text: 'Кейсы', href: '#' },
+        { text: 'Текущие проекты', href: '#' },
+        { text: 'Контакты', href: '#' },
     ];
 
     const { isDesktop } = useContext(GlobalContext);
@@ -21,7 +21,7 @@ export default function Header() {
             bgColor="bg-black"
         >
             <header className="flex w-full items-center justify-between">
-                <Logo width={isDesktop ? 230 : 130} height={isDesktop ? 70 : 40} />
+                <Logo width={isDesktop ? 195 : 130} height={isDesktop ? 65 : 40} />
                 <Navbar navItems={navItems} />
                 {isDesktop && (
                     <PillButton classes="text-black bg-white font-semibold">

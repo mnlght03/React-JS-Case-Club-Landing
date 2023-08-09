@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import { GlobalContext } from './context';
 import { isDesktopPredicate } from './utils';
 import Hero from './components/Hero';
 import ChronoLine from './ui/ChronoLine';
+import About from './components/About';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
             <Header />
             <Hero />
             <ChronoLine startDate={'2012'} endDate={'2022'}/>
-            <div className='h-screen'></div>
+            <About />
         </GlobalContext.Provider>
     );
 }

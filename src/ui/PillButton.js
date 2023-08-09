@@ -7,7 +7,7 @@ export default function PillButton({
 }) {
     return (
         <button
-            className={`whitespace-nowrap rounded-full py-2 px-6 border-solid border-2 ${classes}`}
+            className={`whitespace-nowrap rounded-full py-3 px-8 border-solid border-2 ${classes}`}
             {...props}
         >
             {children}
