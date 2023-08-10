@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import RoundCard from "../ui/RoundCard";
-import EventCardButtons from "./EventCardButtons";
 import PlusButton from "../ui/PlusButton";
 import PillButton from "../ui/PillButton";
-import { smTextDesktop, smallTextDesktop } from "../../utils";
+import { smTextDesktop, smTextMobile, smallTextDesktop } from "../../utils";
 
 export default function EventCardMobile({ evt, classes = '' }) {
   const [isOpened, setIsOpened] = useState(false);
@@ -16,8 +15,8 @@ export default function EventCardMobile({ evt, classes = '' }) {
                 <PlusButton border classes='ml-auto' onClick={() => setIsOpened(!isOpened)}/>
             </div>
             {isOpened && (
-                <div className='border-solid border-second_grey/20 border-t-[1px] mt-6'>
-                    <p className={`text-second_grey font-semibold w-full mt-6 ${smTextDesktop}`}>{evt.description}</p>
+                <div className={`border-solid border-second_grey/20 border-t-[1px] mt-6 ${smTextMobile}`}>
+                    <p className={`text-second_grey  w-full mt-6 ${smTextDesktop}`}>{evt.description}</p>
                     <PillButton classes={`bg-blue text-white mt-6 w-full ${smTextDesktop}`}>Зарегистрироваться</PillButton>
                 </div>
             )}
