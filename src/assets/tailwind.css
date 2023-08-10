@@ -11,14 +11,26 @@
         box-sizing: border-box;
         @apply scrollbar-thin scrollbar-thumb-grey scrollbar-track-grey/50 scrollbar-corner-grey/70;
     }
-
+    
     *::-webkit-scrollbar-thumb {
         border-radius: 5px;
     }
-
+    
     html, body {
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         height: 100vh;
+    }
+    
+    .persons-list {
+        @apply scrollbar-thumb-grey/20 scrollbar-track-transparent;
+    }
+
+    .persons-list::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    .persons-list::-webkit-scrollbar-thumb {
+        @apply border-solid border-[5px] border-beige rounded-full  ;
     }
 }
