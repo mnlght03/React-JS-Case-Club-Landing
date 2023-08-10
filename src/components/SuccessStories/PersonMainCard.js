@@ -27,8 +27,8 @@ export default function PersonMainCard({ person }) {
                         </Button>
                     ))}
                 </div>
-                {person.description.split('\n').map((text) => (
-                    <p className="mt-4 font-semibold">{text}</p>
+                {person.description.split('\n').map((text, i) => (
+                    <p key={i} className="mt-4 font-semibold">{text}</p>
                 ))}
             </div>
         </div>
