@@ -11,6 +11,7 @@ import CurrentProjects from './components/CurrentProjects';
 import { EventsSchedule } from './components/Events';
 import SuccessStories from './components/SuccessStories';
 import OurTeam from './components/OurTeam';
+import Events from './components/Events/Events';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
             <EventsSchedule />
             <SuccessStories />
             <OurTeam />
+            <Events />
         </GlobalContext.Provider>
     );
 }
