@@ -29,7 +29,8 @@ export default function Partners() {
                 </h1>
                 {isDesktop && <PartnersButton />}
             </div>
-            <PartnersSlider partners={partners} classes='mt-12'/>
+            <PartnersSlider partners={partners} classes='mt-16'/>
+            <PartnersSlider partners={partners} classes='mt-4'/>
         </Section>
     );
 }
