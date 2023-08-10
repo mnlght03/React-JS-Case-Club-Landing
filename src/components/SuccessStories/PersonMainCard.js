@@ -5,7 +5,7 @@ import Button from '../ui/Button';
 
 export default function PersonMainCard({ person }) {
     return (
-        <div className="w-full xl:w-8/12 flex flex-col xl:flex-row gap-4">
+        <div className="w-full xl:w-8/12 flex flex-col xl:flex-row gap-6">
             <ImageCard classes="min-w-[260px] h-[300px] xl:h-[380px]" />
             <div>
                 <p className={`font-semibold mt-4 ${mediumTextMobile} ${textDesktop}`}>

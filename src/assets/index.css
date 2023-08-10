@@ -33,4 +33,14 @@
     .persons-list::-webkit-scrollbar-thumb {
         @apply border-solid border-[5px] border-beige rounded-full  ;
     }
+
+    .svg-blue > path {
+        fill: #2E6AF6;
+        stroke: #2E6AF6;
+    }
+
+    .svg-grey > path {
+        fill: #828CA3;
+        stroke: #828CA3;
+    }
 }
