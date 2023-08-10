@@ -6,7 +6,7 @@ export default function ChatMessage({
     ...props
 }) {
     return (
-        <div className={`rounded-[28px] inline-flex items-center py-2 px-4 xl:py-4 xl:px-6 ${classes}`} {...props}>
+        <div className={`rounded-3xl inline-flex items-center py-2 px-4 xl:py-4 xl:px-6 ${classes}`} {...props}>
             {children}
         </div>
     );

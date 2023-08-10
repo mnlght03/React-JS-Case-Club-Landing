@@ -26,7 +26,7 @@ export default function ProjectDescription({ project }) {
                             }`}
                         >
                             <span className="text-grey/40 font-semibold">{entryKey}</span>
-                            <span className="text-black  font-semibold ml-auto">
+                            <span className="text-black  font-semibold ml-auto text-end">
                                 {val}
                             </span>
                         </div>

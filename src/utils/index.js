@@ -13,3 +13,5 @@ export const textMobile = 'text-lg';
 export const textDesktop = 'xl:text-3xl';
 export const smallTextMobile = 'text-md';
 export const smallTextDesktop = 'xl:text-lg';
+export const xsTextDesktop = 'xl:text-xs';
+export const smTextDesktop = 'xl:text-sm';
