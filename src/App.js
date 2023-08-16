@@ -14,6 +14,7 @@ import OurTeam from './components/OurTeam';
 import Events from './components/Events/Events';
 import Faq from './components/FAQ';
 import Footer from './components/Footer';
+import ContactUs from './components/ContactUs';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <SuccessStories />
             <OurTeam />
             <Events />
+            <ContactUs />
             <Faq />
             <Footer />
         </GlobalContext.Provider>
