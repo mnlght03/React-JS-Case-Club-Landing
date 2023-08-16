@@ -27,7 +27,7 @@ export default function DropdownInfoCard({ title, text, classes = '' }) {
                 <div className="mt-4">
                     {text.split('\n').map((paragraph) => (
                         <p
-                            className={` ${smTextDesktop}`}
+                            className={` ${smallTextDesktop}`}
                         >
                             {paragraph}
                         </p>

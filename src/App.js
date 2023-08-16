@@ -13,6 +13,7 @@ import SuccessStories from './components/SuccessStories';
 import OurTeam from './components/OurTeam';
 import Events from './components/Events/Events';
 import Faq from './components/FAQ';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <OurTeam />
             <Events />
             <Faq />
+            <Footer />
         </GlobalContext.Provider>
     );
 }
