@@ -12,6 +12,7 @@ import { EventsSchedule } from './components/Events';
 import SuccessStories from './components/SuccessStories';
 import OurTeam from './components/OurTeam';
 import Events from './components/Events/Events';
+import Faq from './components/FAQ';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
             <SuccessStories />
             <OurTeam />
             <Events />
+            <Faq />
         </GlobalContext.Provider>
     );
 }

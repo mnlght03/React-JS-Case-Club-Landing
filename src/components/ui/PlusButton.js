@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-export default function PlusButton({ classes = '', border = false, onClick = () => {} }) {
+function PlusButton({ classes = '', border = false, onClick = () => {} }, ref=null) {
     const [isClicked, setIsClicked] = useState(false);
     return (
         <button
+            ref={ref}
             className={
                 classes +
                 ' min-w-12 min-h-12 w-12 h-12 inline-block rounded-full flex items-center justify-center cursor-pointer ' +
@@ -25,3 +26,5 @@ export default function PlusButton({ classes = '', border = false, onClick = () 
         </button>   
     );
 }
+
+export default React.forwardRef(PlusButton);
