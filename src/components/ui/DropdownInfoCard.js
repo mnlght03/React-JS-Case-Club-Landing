@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import RoundCard from './RoundCard';
-import EventCardButtons from '../Events/EventCardButtons';
 import PlusButton from './PlusButton';
 import { smTextDesktop, smallTextDesktop } from '../../utils';
 

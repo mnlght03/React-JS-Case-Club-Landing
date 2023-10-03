@@ -1,20 +1,20 @@
 import React, { useContext } from 'react';
-import { GlobalContext } from '../../context';
 import EventCardDesktop from './EventCardDesktop';
 import EventCardMobile from './EventCardMobile';
+import { GlobalContext } from '../../context';
 
-export default function EventCard({ evt, btnStyle = 'blue', classes = '' }) {
+export default function EventCard({ event, btnStyle = 'blue', classes = '' }) {
     const { isDesktop } = useContext(GlobalContext);
 
     return isDesktop ? (
         <EventCardDesktop
-            evt={evt}
+            event={event}
             btnStyle={btnStyle}
             classes={classes}
         />
     ) : (
         <EventCardMobile
-            evt={evt}
+            event={event}
             classes={classes}
         />
     );

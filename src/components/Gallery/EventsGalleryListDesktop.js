@@ -3,25 +3,25 @@ import Button from '../ui/Button';
 
 export default function EventsGalleryListDesktop({
     events,
-    chosen,
+    chosenId,
     setChosen,
     classes = '',
 }) {
     return (
         <div dir='rtl' className={`flex flex-col gap-2 w-[380px] ${classes}`}>
-            {events.map((evt, i) => (
+            {events.map((event, i) => (
                 <Button
                     dir='ltr'
-                    key={i}
+                    key={event.id ?? i}
                     classes={`font-semibold text-start ${
-                        i === chosen
+                        event.id === chosenId
                             ? 'bg-light_second_grey text-blue'
                             : 'bg-transparent text-second_grey'
                     } `}
                     bigPadding
-                    onClick={() => setChosen(i)}
+                    onClick={() => setChosen(event)}
                 >
-                    {evt}
+                    {event.name}
                 </Button>
             ))}
         </div>

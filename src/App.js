@@ -8,45 +8,49 @@ import About from './components/About';
 import OurProjects from './components/OurProjects';
 import Partners from './components/Partners';
 import CurrentProjects from './components/CurrentProjects';
-import { EventsSchedule } from './components/Events';
+import EventsSchedule from './components/Schedule';
 import SuccessStories from './components/SuccessStories';
 import OurTeam from './components/OurTeam';
-import Events from './components/Events/Events';
+import Gallery from './components/Gallery/Events';
 import Faq from './components/FAQ';
 import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
 
-
 function App() {
-    const [isDesktop, setIsDesktop] = useState(isDesktopPredicate());
-    
-    const updateDesktopState = () => setIsDesktop(isDesktopPredicate());
+  const [isDesktop, setIsDesktop] = useState(isDesktopPredicate());
 
-    useEffect(() => {
-        window.addEventListener('resize', updateDesktopState);
-        return () => window.removeEventListener('resize', updateDesktopState);
-    });
+  const updateDesktopState = () => setIsDesktop(isDesktopPredicate());
 
-    return (
-        <GlobalContext.Provider value={{
-            isDesktop,
-        }}>
-            <Header />
-            <Hero />
-            <ChronoLine startDate={'2012'} endDate={'2022'}/>
-            <About />
-            <OurProjects />
-            <Partners />
-            <CurrentProjects />
-            <EventsSchedule />
-            <SuccessStories />
-            <OurTeam />
-            <Events />
-            <ContactUs />
-            <Faq />
-            <Footer />
-        </GlobalContext.Provider>
-    );
+  useEffect(() => {
+    window.addEventListener('resize', updateDesktopState);
+    return () => window.removeEventListener('resize', updateDesktopState);
+  });
+
+  return (
+    <GlobalContext.Provider
+      value={{
+        isDesktop,
+      }}
+    >
+      <Header />
+      <Hero />
+      <ChronoLine
+        startDate={'2012'}
+        endDate={'2022'}
+      />
+      <About />
+      <OurProjects />
+      <Partners />
+      <CurrentProjects />
+      <EventsSchedule />
+      <SuccessStories />
+      <OurTeam />
+      <Gallery />
+      <ContactUs />
+      <Faq />
+      <Footer />
+    </GlobalContext.Provider>
+  );
 }
 
 export default App;

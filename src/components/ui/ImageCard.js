@@ -1,13 +1,23 @@
-import React from "react";
-import RoundCard from "./RoundCard";
+import React from 'react';
+import RoundCard from './RoundCard';
 
-export default function ImageCard({classes = '', imgSrc = '', imgAlt = '', children = null}) {
+export default function ImageCard({
+  classes = '',
+  imgSrc = undefined,
+  imgAlt = '',
+  children = null,
+}) {
   return (
-    <RoundCard classes={classes} style={{
-        // background: `no-repeat center/100% url(${imgSrc})`
-        background: '#828CA3'
-    }}>
-        {children}
+    <RoundCard
+      classes={classes}
+      style={{
+        background:
+          imgSrc
+            ? `no-repeat center/100% url(${imgSrc})` 
+            : '#828CA3',
+      }}
+    >
+      {children}
     </RoundCard>
   );
 }

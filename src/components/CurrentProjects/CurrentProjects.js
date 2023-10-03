@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Section from '../ui/Section';
 import { bigTextDesktop, bigTextMobile } from '../../utils';
 import ChatMessage from '../ui/ChatMessage';
-import CurrentProjectsService from './CurrentProjectsService';
 import ButtonsLine from './ButtonsLine';
 import ProjectDescription from './ProjectDescription';
+import CurrentProjectService from '../../services/CurrentProjectService';
 
 export default function CurrentProjects() {
     const [projects, setProjects] = useState([]);
@@ -12,7 +12,7 @@ export default function CurrentProjects() {
     const [chosen, setChosen] = useState(0);
 
     const fetchProjects = async () => {
-        const projects = await CurrentProjectsService.getAllCurrentProjects();
+        const projects = await CurrentProjectService.getAll();
         setProjects(projects);
     };
 

@@ -1,3 +1,3 @@
 import EventsSchedule from "./EventsSchedule";
 
-export { EventsSchedule }
+export default EventsSchedule;
