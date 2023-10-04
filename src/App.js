@@ -46,7 +46,7 @@ function App() {
       <SuccessStories />
       <OurTeam />
       <Gallery />
-      <ContactUs />
+      {/* <ContactUs /> */}
       <Faq />
       <Footer />
     </GlobalContext.Provider>

@@ -11,10 +11,7 @@ export default function ImageCard({
     <RoundCard
       classes={classes}
       style={{
-        background:
-          imgSrc
-            ? `no-repeat center/100% url(${imgSrc})` 
-            : '#828CA3',
+        background: imgSrc ? `no-repeat center/cover url(${imgSrc})` : '#828CA3',
       }}
     >
       {children}

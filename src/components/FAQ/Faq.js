@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
-import FaqService from './FaqService';
 import Section from '../ui/Section';
 import { bigTextDesktop, bigTextMobile } from '../../utils';
 import DropdownInfoCard from '../ui/DropdownInfoCard';
 import { GlobalContext } from '../../context';
+import FaqService from '../../services/FaqService';
 
 export default function Faq() {
     const { isDesktop } = useContext(GlobalContext);
@@ -29,8 +29,8 @@ export default function Faq() {
             <div className="mt-8">
                 {questions.map((question) => (
                     <DropdownInfoCard
-                        title={question.title}
-                        text={question.text}
+                        title={question.question}
+                        text={question.answer}
                         classes="mt-4"
                     />
                 ))}
