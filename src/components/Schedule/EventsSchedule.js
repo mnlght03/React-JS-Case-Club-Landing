@@ -19,7 +19,7 @@ export default function EventsSchedule() {
   return (
     <Section bgColor="bg-beige">
       <h1
-        className={`text-center font-semibold mt-16 ${bigTextMobile} ${bigTextDesktop}`}
+        className={`text-center font-semibold mt-8 lg:mt-16 ${bigTextMobile} ${bigTextDesktop}`}
       >
         Расписание мероприятий
       </h1>

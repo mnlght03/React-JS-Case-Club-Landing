@@ -13,7 +13,7 @@ export default class ProjectService {
         cases: item.projectStageList.map((stage) => ({
           id: stage.id,
           title: stage.name,
-          date: stage.timeframe,
+          date: stage.timeFrame,
           coverage: stage.coverage,
           participants: stage.attendee,
         })),

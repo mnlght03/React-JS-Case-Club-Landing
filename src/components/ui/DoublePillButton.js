@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 
 export default function DoublePillButton({
     activeSide = 'left',
-    firstChildren,
-    secondChildren,
+    firstChild,
+    secondChild,
     disabled=false,
     leftDisabled = false,
     rightDisabled = false,
+    smallPadding = false,
     classes='',
 }) {
     const [isLeftActive, setIsLeftActive] = useState(activeSide === 'left');
@@ -19,20 +20,36 @@ export default function DoublePillButton({
             <button
                 disabled={disabled || leftDisabled}
                 className={
-                    `${isLeftActive ? activeClassname : inactiveClassname} border-r-0 rounded-l-xl py-3 px-8`
+                    `${isLeftActive 
+                        ? activeClassname
+                        : inactiveClassname
+                    } 
+                    border-r-0 rounded-l-xl 
+                    ${smallPadding 
+                        ? 'py-1.5 px-4'
+                        : 'py-3 px-8'
+                    }`
                 }
                 onClick={() => setIsLeftActive(true)}
             >
-                {firstChildren}
+                {firstChild}
             </button>
             <button
                 disabled={disabled || rightDisabled}
                 className={
-                    `${!isLeftActive ? activeClassname : inactiveClassname} border-l-0 rounded-r-xl py-3 px-8`
+                    `${!isLeftActive 
+                        ? activeClassname 
+                        : inactiveClassname
+                    } 
+                    border-l-0 rounded-r-xl 
+                    ${smallPadding 
+                        ? 'py-1.5 px-4' 
+                        : 'py-3 px-8'
+                    }`
                 }
                 onClick={() => setIsLeftActive(false)}
             >
-                {secondChildren}
+                {secondChild}
             </button>
         </div>
     );

@@ -1,0 +1,38 @@
+.card-bg-circles,
+.card-bg-rectangles,
+.card-bg-quadrants {
+    position: relative;
+}
+
+.card-bg-circles::before {
+    position: absolute;
+    top: -16px;
+    left: -40px;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: repeat url('../../assets/img/icons/background-circle.svg');
+    z-index: 0;
+}
+
+.card-bg-rectangles::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: repeat url('../../assets/img/icons/background-rectangle.svg');
+    z-index: 0;
+}
+
+.card-bg-quadrants::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: repeat url('../../assets/img/icons/background-quadrant.svg');
+    z-index: 0;
+}

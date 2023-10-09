@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { getApiImageUrl } from '../utils';
 
 export default class FaqService {
   static API_URL = process.env.REACT_APP_API_BASE + 'faq/';

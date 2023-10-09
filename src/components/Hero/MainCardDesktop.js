@@ -1,20 +1,22 @@
 import React from 'react';
 import RoundCard from '../ui/RoundCard';
 import ChatMessage from '../ui/ChatMessage';
-import { ReactComponent as SettingsEmoji } from '../../assets/img/icons/settings-emoji.svg';
-import { ReactComponent as BriefcaseEmoji } from '../../assets/img/icons/briefcase-emoji.svg';
-import { bigTextDesktop } from '../../utils';
+import {ReactComponent as BriefcaseEmoji} from '../../assets/img/icons/briefcase-emoji.svg';
+import {ReactComponent as SettingsEmoji} from '../../assets/img/icons/settings-emoji.svg';
+import {bigTextDesktop} from '../../utils';
+
+import '../../assets/styles/main-card.css'
 
 export default function MainCardDesktop() {
     return (
-        <RoundCard classes="bg-blue xl:py-16 xl:px-28 xl:row-span-8">
+        <RoundCard classes="main-card bg-blue lg:py-16 lg:px-28 lg:row-span-8">
             <p className={`w-fit text-white ${bigTextDesktop} font-semibold `}>
                 Учим студентов{' '}
                 <ChatMessage classes="bg-white rounded-tr-none">
                     <SettingsEmoji
                         width={50}
                         height={50}
-                    />{' '}
+                    />
                     <span className="ml-4 text-black leading-4">думать</span>
                 </ChatMessage>
             </p>

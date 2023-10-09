@@ -17,9 +17,12 @@ import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
 
 function App() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isDesktop, setIsDesktop] = useState(isDesktopPredicate());
-
-  const updateDesktopState = () => setIsDesktop(isDesktopPredicate());
+  const updateDesktopState = () => {
+    setWindowWidth(window.innerWidth)
+    setIsDesktop(isDesktopPredicate());
+  }
 
   useEffect(() => {
     window.addEventListener('resize', updateDesktopState);
@@ -28,15 +31,16 @@ function App() {
 
   return (
     <GlobalContext.Provider
-      value={{
+        value={{
         isDesktop,
+        windowWidth
       }}
     >
       <Header />
       <Hero />
       <ChronoLine
         startDate={'2012'}
-        endDate={'2022'}
+        endDate={'2023'}
       />
       <About />
       <OurProjects />

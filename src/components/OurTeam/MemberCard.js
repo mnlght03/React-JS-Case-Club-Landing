@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageCard from '../ui/ImageCard';
-import tgIcon from '../../assets/img/icons/telegram.png';
+import tgIcon from '../../assets/img/icons/telegram.svg';
 import Button from '../ui/Button';
 import { smTextDesktop } from '../../utils';
 

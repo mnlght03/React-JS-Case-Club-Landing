@@ -1,0 +1,36 @@
+.hero-projects {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-projects::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -2px;
+    bottom: -12px;
+    content: '';
+    background: no-repeat center/100% url('../img/icons/background-search.svg');
+}
+
+.hero-contacts {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-contacts::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -12px;
+    content: '';
+    background: no-repeat center/100% url('../img/icons/background-fire.svg');
+}
+
+@media (max-width: 1600px) {
+    .hero-contacts::after,
+    .hero-projects::after {
+        /*bottom: -30px;*/
+    }
+}
