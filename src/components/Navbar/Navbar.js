@@ -1,32 +1,28 @@
 import React, {useContext, useState} from 'react';
 import {GlobalContext} from '../../context';
 import MobileNavButton from '../ui/MobileNavButton';
+import Popup from "../ui/Popup";
+import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav";
 
-export default function Navbar({navItems, textColor = 'text-white', ...props}) {
+export default function Navbar({navItems, textColor = 'text-white'}) {
     const {isDesktop} = useContext(GlobalContext);
-    const [isHidden, setIsHidden] = useState(!isDesktop);
+    const [isHidden, setIsHidden] = useState(isDesktop);
 
     return (
         <>
             {isDesktop && (
-                <nav {...props}>
-                    <ul className='flex'>
-                        {navItems.map((item, i) => (
-                            <li key={i}>
-                                <a
-                                    className={`${textColor} ${i === 0 ? '' : 'ml-12'} hover:underline`}
-                                    href={item.href}
-                                >
-                                    {item.text}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
+                <DesktopNav navItems={navItems} textColor={textColor}/>
             )}
 
             {!isDesktop && (
                 <MobileNavButton onClick={() => setIsHidden(!isHidden)}/>
+            )}
+
+            {!isHidden && (
+                <Popup closeFn={() => setIsHidden(true)}>
+                    <MobileNav navItems={navItems} textColor={textColor}/>
+                </Popup>
             )}
         </>
     );

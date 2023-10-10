@@ -1,6 +1,6 @@
 import React from 'react';
 import ArrowButton from './ArrowButton';
-import { mediumTextDesktop, smTextDesktop, smTextMobile, smallTextDesktop, textDesktop } from '../../utils';
+import { smTextDesktop, smTextMobile } from '../../utils';
 
 export default function ScrollCounter({ classes = '', minValue = 1, step=1, current, setCurrent, total }) {
     return (

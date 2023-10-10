@@ -17,6 +17,6 @@ export default function Events() {
 
   return (
     events.length > 0 &&
-    (isDesktop ? <EventsGalleryDesktop events={events} /> : <EventsGalleryMobile />)
+    (isDesktop ? <EventsGalleryDesktop events={events} /> : <EventsGalleryMobile events={events} />)
   );
 }

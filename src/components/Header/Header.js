@@ -7,10 +7,10 @@ import { PartnersButton } from '../Partners';
 
 export default function Header() {
     const navItems = [
-        { text: 'О нас', href: '#' },
-        { text: 'Кейсы', href: '#' },
-        { text: 'Текущие проекты', href: '#' },
-        { text: 'Контакты', href: '#' },
+        { text: 'О нас', href: '#about' },
+        { text: 'Кейсы', href: '#cases' },
+        { text: 'Текущие проекты', href: '#current-projects' },
+        { text: 'Контакты', href: '#contacts' },
     ];
 
     const { isDesktop } = useContext(GlobalContext);

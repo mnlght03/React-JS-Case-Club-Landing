@@ -1,0 +1,30 @@
+.mobile-nav-button span {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+}
+
+.mobile-nav-button span::before {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    right: 0;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: white;
+}
+
+.mobile-nav-button span::after {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    right: 0;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: white;
+}

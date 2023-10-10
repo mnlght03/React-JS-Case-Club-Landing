@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useSlider} from "../../hooks/useSlider";
 
 function Slider({minOffset, maxOffset, classes = '', children}) {

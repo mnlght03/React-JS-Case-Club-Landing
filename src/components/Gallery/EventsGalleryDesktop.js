@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import EventsGalleryListDesktop from './EventsGalleryListDesktop';
-import EventsGalleryPhotosDesktop from './EventsGalleryPhotosDesktop';
+import EventsGalleryPhotos from './EventsGalleryPhotos';
 import Section from '../ui/Section';
 import ScrollCounter from '../ui/ScrollCounter';
 import { bigTextDesktop } from '../../utils';
@@ -8,29 +8,16 @@ import { bigTextDesktop } from '../../utils';
 export default function EventsGalleryDesktop({ events }) {
   const PHOTOS_PER_PAGE = 4;
 
-  const [currentPhotoCount, setCurrentPhotoCount] = useState(4);
-
   const [chosenEvent, setChosenEvent] = useState(events[0]);
 
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => setCurrentPage(1), [chosenEvent]);
 
-  //   const setPage = (i) => {
-  //     let page = Math.floor(i / PHOTOS_PER_PAGE);
-  //     page = page < 0 ? page : PHOTOS_PER_PAGE;
-  //     setCurrentPage(page);
-  //     setCurrentPhotoCount(
-  //       PHOTOS_PER_PAGE * page > chosenEvent.photos.length
-  //         ? chosenEvent.photos.length
-  //         : PHOTOS_PER_PAGE * page
-  //     );
-  //   };
-
   const setPage = (i) => {
     if (i < 0) setCurrentPage(1);
-    else if (i > chosenEvent.photos.length / 4)
-      setCurrentPage(chosenEvent.photos.length / 4);
+    else if (i > chosenEvent.photos.length / PHOTOS_PER_PAGE)
+      setCurrentPage(chosenEvent.photos.length / PHOTOS_PER_PAGE);
     else setCurrentPage(i);
   };
 
@@ -51,7 +38,7 @@ export default function EventsGalleryDesktop({ events }) {
           classes="ml-auto"
           current={currentPage}
           setCurrent={setPage}
-          total={chosenEvent.photos.length / 4}
+          total={chosenEvent.photos.length / PHOTOS_PER_PAGE}
         />
       </div>
       <div className="flex gap-4 justify-between mt-12">
@@ -60,7 +47,7 @@ export default function EventsGalleryDesktop({ events }) {
           chosenId={chosenEvent.id ?? 0}
           setChosen={setChosenEvent}
         />
-        <EventsGalleryPhotosDesktop photos={pagePhotos} />
+        <EventsGalleryPhotos photos={pagePhotos} />
       </div>
     </Section>
   );
