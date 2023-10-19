@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MobileNav({navItems, textColor = 'text-white'}) {
+function MobileNav({navItems, textColor = 'text-white', closeFn}) {
     return (
         <nav>
             <ul className={'px-12'}>
@@ -8,6 +8,7 @@ function MobileNav({navItems, textColor = 'text-white'}) {
                     <li
                         key={i}
                         className={'py-4 border-b border-b-white/10'}
+                        onClick={closeFn}
                     >
                         <a
                             className={`${textColor}`}

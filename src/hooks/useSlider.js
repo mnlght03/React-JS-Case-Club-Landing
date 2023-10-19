@@ -5,7 +5,7 @@ export function useSlider(minOffset, maxOffset) {
     const [startX, setStartX] = useState(0);
 
     const handleTouchStart = (event) => {
-        event.target.closest('.slider').style.transition = 'none';
+        // event.target.closest('.slider').style.transition = 'none';
         setStartX(event.targetTouches[0].clientX);
     }
 

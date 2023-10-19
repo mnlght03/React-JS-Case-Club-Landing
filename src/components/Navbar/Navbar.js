@@ -7,7 +7,7 @@ import MobileNav from "./MobileNav";
 
 export default function Navbar({navItems, textColor = 'text-white'}) {
     const {isDesktop} = useContext(GlobalContext);
-    const [isHidden, setIsHidden] = useState(isDesktop);
+    const [isHidden, setIsHidden] = useState(true);
 
     return (
         <>
@@ -21,7 +21,10 @@ export default function Navbar({navItems, textColor = 'text-white'}) {
 
             {!isHidden && (
                 <Popup closeFn={() => setIsHidden(true)}>
-                    <MobileNav navItems={navItems} textColor={textColor}/>
+                    <MobileNav
+                        closeFn={() => setIsHidden(true)}
+                        navItems={navItems} textColor={textColor}
+                    />
                 </Popup>
             )}
         </>
