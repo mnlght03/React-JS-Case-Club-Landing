@@ -14,7 +14,7 @@ export default function OurTeam() {
   }, []);
 
   return (
-    <Section bgColor="bg-beige">
+    <Section bgColor="bg-beige" id={"our-team"}>
       {isDesktop ? (
         <OurTeamDesktop classes={'mt-16'} members={members}/>
       ) : (

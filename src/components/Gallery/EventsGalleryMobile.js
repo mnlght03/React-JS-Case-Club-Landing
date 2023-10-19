@@ -14,7 +14,7 @@ export default function EventsGalleryMobile({events}) {
     const [isOpened, setIsOpened] = useState(false);
 
     return (
-        <Section bgColor="bg-beige">
+        <>
             <h1 className={`mt-8 font-semibold text-center w-full text-3xl`}>Мероприятия</h1>
             <Button
                 classes={
@@ -25,8 +25,10 @@ export default function EventsGalleryMobile({events}) {
                 {chosenEvent.name}
             </Button>
             {isOpened && (
-                <Popup topRoundMargin bgColor={'bg-light_second_grey'} closeFn={() => setIsOpened(false)}>
-                    <h1 className={'w-full font-semibold text-lg mb-4 px-4'}>Выберите мероприятие</h1>
+                <Popup topRoundMargin bgColor={'bg-light_second_grey'}
+                       closeFn={() => setIsOpened(false)}>
+                    <h1 className={'w-full font-semibold text-lg mb-4 px-4'}>Выберите
+                        мероприятие</h1>
                     <MobileEventSelect
                         events={events}
                         chosen={chosenEvent}
@@ -34,9 +36,11 @@ export default function EventsGalleryMobile({events}) {
                     />
                 </Popup>
             )}
-            <Slider classes={'flex gap-4 mt-6'} minOffset={0} maxOffset={478 * (Math.floor(chosenEvent.photos.length / 4) - 1) + 200}>
-                <EventsGalleryPhotosMobile photos={chosenEvent.photos.slice(0, MAX_PHOTO_COUNT)} />
+            <Slider classes={'flex gap-4 mt-6'} minOffset={0}
+                    maxOffset={478 * (Math.floor(chosenEvent.photos.length / 4) - 1) + 200}>
+                <EventsGalleryPhotosMobile
+                    photos={chosenEvent.photos.slice(0, MAX_PHOTO_COUNT)}/>
             </Slider>
-        </Section>
+        </>
     );
 }

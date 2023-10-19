@@ -20,8 +20,14 @@ export default function Faq() {
     }, []);
 
     return (
-        <Section bgColor="bg-beige" rounded={!isDesktop} topRoundMargin={!isDesktop} roundFill='bg-blue'
-                 classes={isDesktop ? '' : ''}>
+        <Section
+            bgColor="bg-beige"
+            rounded={!isDesktop}
+            topRoundMargin={!isDesktop}
+            roundFill='bg-blue'
+            classes={isDesktop ? '' : ''}
+            id="faq"
+        >
             <h1
                 className={`xl:mt-16 text-center font-semibold ${bigTextMobile} ${bigTextDesktop}`}
             >

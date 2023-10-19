@@ -20,7 +20,7 @@ export default function SuccessStories() {
   }, []);
 
   return (
-    <Section bgColor="bg-beige">
+    <Section bgColor="bg-beige" id="success-stories">
       <h1
         className={`text-center font-semibold text-black mt-8 lg:mt-16 ${bigTextMobile} ${bigTextDesktop}`}
       >

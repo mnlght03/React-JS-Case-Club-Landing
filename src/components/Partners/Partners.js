@@ -28,7 +28,7 @@ export default function Partners() {
   }, [partners]);
 
   return (
-    <Section bgColor="bg-black">
+    <Section bgColor="bg-black" id="partners">
       <div className="flex items-center justify-between mt-6 xl:mt-8">
         <h1 className={`text-white font-semibold ${mediumTextMobile} ${bigTextDesktop}`}>
           С нами сотрудничали

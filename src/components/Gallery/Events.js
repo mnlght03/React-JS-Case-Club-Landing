@@ -1,22 +1,29 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { GlobalContext } from '../../context';
+import React, {useContext, useEffect, useState} from 'react';
+import {GlobalContext} from '../../context';
 import EventsGalleryDesktop from './EventsGalleryDesktop';
 import EventsGalleryMobile from './EventsGalleryMobile';
 import EventService from '../../services/EventService';
+import Section from "../ui/Section";
 
 export default function Events() {
-  const { isDesktop } = useContext(GlobalContext);
+    const {isDesktop} = useContext(GlobalContext);
 
-  const [events, setEvents] = useState([]);
+    const [events, setEvents] = useState([]);
 
-  const fetchEvents = async () => setEvents(await EventService.getAll());
+    const fetchEvents = async () => setEvents(await EventService.getAll());
 
-  useEffect(() => {
-    fetchEvents();
-  }, []);
+    useEffect(() => {
+        fetchEvents();
+    }, []);
 
-  return (
-    events.length > 0 &&
-    (isDesktop ? <EventsGalleryDesktop events={events} /> : <EventsGalleryMobile events={events} />)
-  );
+    return (
+        events.length > 0 && (
+            <Section bgColor="bg-beige" id="events">
+            {isDesktop
+                ? <EventsGalleryDesktop events={events}/>
+                : <EventsGalleryMobile events={events}/>
+            }
+            </Section>
+        )
+    );
 }

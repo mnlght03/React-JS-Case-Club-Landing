@@ -7,14 +7,14 @@ import { mediumTextDesktop, smTextDesktop, smallTextDesktop } from '../../utils'
 
 export default function FooterDesktop() {
     const navItems = [
-        { text: 'О нас', href: '#' },
-        { text: 'Кейсы', href: '#' },
-        { text: 'Текущие проекты', href: '#' },
-        { text: 'Контакты', href: '#' },
+        { text: 'О нас', href: '#about' },
+        { text: 'Кейсы', href: '#cases' },
+        { text: 'Текущие проекты', href: '#current-projects' },
+        { text: 'Контакты', href: '#contact' },
     ];
 
     return (
-        <Section bgColor="bg-beige">
+        <Section bgColor="bg-beige" id={'contacts'}>
             <div className="flex items-center justify-between mt-8 xl:mt-16">
                 <Logo
                     width={195}
@@ -32,15 +32,15 @@ export default function FooterDesktop() {
                     <p className='mt-4 font-semibold'>+7 (913) 939-00-00</p>
                     <p className='mt-4 font-semibold'>+7 (953) 999-110-55</p>
                 </div>
-                <div >
-                    <a href="#" className='block mt-8 font-semibold'>Реализованные проекты</a>
-                    <a href="#" className='block mt-4 font-semibold'>С нами сотрудничали</a>
-                    <a href="#" className='block mt-4 font-semibold'>Расписание мероприятий</a>
+                <div>
+                    <a href="#cases" className='block mt-8 font-semibold'>Реализованные проекты</a>
+                    <a href="#partners" className='block mt-4 font-semibold'>С нами сотрудничали</a>
+                    <a href="#schedule" className='block mt-4 font-semibold'>Расписание мероприятий</a>
                 </div>
-                <div >
-                    <a href="#" className='block mt-8 font-semibold'>Истории успеха</a>
-                    <a href="#" className='block mt-4 font-semibold'>Наша команда</a>
-                    <a href="#" className='block mt-4 font-semibold'>Мероприятия</a>
+                <div>
+                    <a href="#success-stories" className='block mt-8 font-semibold'>Истории успеха</a>
+                    <a href="#our-team" className='block mt-4 font-semibold'>Наша команда</a>
+                    <a href="#events" className='block mt-4 font-semibold'>Мероприятия</a>
                 </div>
                 <div>
                     <a href="#" className={`block text-blue font-semibold mt-8 ${smallTextDesktop}`}>YouTube</a>

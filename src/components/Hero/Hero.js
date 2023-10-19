@@ -32,37 +32,41 @@ export default function Hero() {
                     </div>
                 </RoundCard>
                 <div className="w-full lg:w-6/12 flex mt-4 lg:ml-4 ">
-                    <RoundCard
-                        classes="hero-projects w-6/12 bg-grey flex flex-col min-h-[150px]"
-                    >
-                        <ArrowRightIcon
-                            style={{
-                                transform: 'rotate(45deg)',
-                            }}
-                            width={isDesktop ? 40 : 20}
-                            height={isDesktop ? 40 : 20}
-                        />
-                        <p className={`mt-auto text-white font-semibold ${textMobile} ${textDesktop}`}>
-                            Текущие
-                        </p>
-                        <p className={`text-white font-semibold ${textMobile} ${textDesktop}`}>
-                            проекты
-                        </p>
-                    </RoundCard>
-                    <RoundCard
-                        classes="hero-contacts w-6/12 bg-green flex flex-col ml-4 min-h-[150px]"
-                    >
-                        <PlusIcon
-                            width={isDesktop ? 40 : 20}
-                            height={isDesktop ? 40 : 20}
-                        />
-                        <p className={`mt-auto text-white font-semibold ${textMobile} ${textDesktop}`}>
-                            Связаться
-                        </p>
-                        <p className={`text-white font-semibold ${textMobile} ${textDesktop}`}>
-                            с нами
-                        </p>
-                    </RoundCard>
+                    <a href="#current-projects" className={'w-6/12'}>
+                        <RoundCard
+                            classes="hero-projects bg-grey flex flex-col min-h-[150px]"
+                        >
+                            <ArrowRightIcon
+                                style={{
+                                    transform: 'rotate(45deg)',
+                                }}
+                                width={isDesktop ? 40 : 20}
+                                height={isDesktop ? 40 : 20}
+                            />
+                            <p className={`mt-auto text-white font-semibold ${textMobile} ${textDesktop}`}>
+                                Текущие
+                            </p>
+                            <p className={`text-white font-semibold ${textMobile} ${textDesktop}`}>
+                                проекты
+                            </p>
+                        </RoundCard>
+                    </a>
+                    <a href="#contact-us" className={'w-6/12'}>
+                        <RoundCard
+                            classes="hero-contacts bg-green flex flex-col ml-4 min-h-[150px]"
+                        >
+                            <PlusIcon
+                                width={isDesktop ? 40 : 20}
+                                height={isDesktop ? 40 : 20}
+                            />
+                            <p className={`mt-auto text-white font-semibold ${textMobile} ${textDesktop}`}>
+                                Связаться
+                            </p>
+                            <p className={`text-white font-semibold ${textMobile} ${textDesktop}`}>
+                                с нами
+                            </p>
+                        </RoundCard>
+                    </a>
                 </div>
             </div>
         </Section>

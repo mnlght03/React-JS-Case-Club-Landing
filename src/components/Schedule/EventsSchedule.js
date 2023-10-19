@@ -17,7 +17,7 @@ export default function EventsSchedule() {
   }, []);
 
   return (
-    <Section bgColor="bg-beige">
+    <Section bgColor="bg-beige" id="schedule">
       <h1
         className={`text-center font-semibold mt-8 lg:mt-16 ${bigTextMobile} ${bigTextDesktop}`}
       >

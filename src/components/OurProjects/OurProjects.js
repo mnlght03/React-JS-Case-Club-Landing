@@ -28,6 +28,7 @@ export default function OurProjects() {
             topRoundMargin
             roundFill="bg-blue"
             bgColor="bg-black"
+            id="cases"
         >
             <div className="flex gap-4 items-center justify-center 2xl:justify-between flex-wrap">
                 <h1

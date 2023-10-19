@@ -10,7 +10,7 @@ export default function About() {
     ]
 
     return (
-        <Section bgColor='bg-blue' rounded topRoundMargin>
+        <Section id="about" bgColor='bg-blue' rounded topRoundMargin>
             <AboutSlider />
             <AboutPills items={aboutPillsItems[0]} classes='mt-12 xl:mt-24' />
             <AboutPills items={aboutPillsItems[1]} classes='mt-4' />

@@ -33,7 +33,7 @@ export default function ContactForm({classes = ''}) {
                 options={projects}
                 onSelect={setProjectChosen}
             />
-            <input type="submit" value="Отправить" className={'text-white mt-4 cursor-pointer'}/>
+            <input type="submit" value="Отправить" className={'text-white mt-4 ml-4 cursor-pointer w-fit'}/>
         </form>
     );
 }

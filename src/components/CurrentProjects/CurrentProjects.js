@@ -25,6 +25,7 @@ export default function CurrentProjects() {
             rounded
             topRoundMargin
             bgColor="bg-beige"
+            id="current-projects"
         >
             <h1 className={`text-black font-semibold text-center ${bigTextMobile} ${bigTextDesktop}`}>
                 Текущие

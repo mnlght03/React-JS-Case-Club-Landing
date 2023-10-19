@@ -3,11 +3,11 @@ import Section from '../ui/Section';
 import { ReactComponent as Logo } from '../../assets/logo-dark.svg';
 import { ReactComponent as ArrowRight } from '../../assets/img/icons/arrow-right.svg';
 import { PartnersButton } from '../Partners';
-import { mediumTextMobile, smTextDesktop, smTextMobile } from '../../utils';
+import { smTextDesktop, smTextMobile } from '../../utils';
 
 export default function FooterMobile() {
     return (
-        <Section bgColor="bg-beige">
+        <Section bgColor="bg-beige" id={'contacts'}>
             <div className='flex items-center justify-between mt-8 xl:mt-16'>
                 <Logo
                     width={130}
@@ -34,14 +34,14 @@ export default function FooterMobile() {
                     <p className='mt-4 font-semibold'>+7 (953) 999-110-55</p>
                 </div>
                 <div className='mt-6 border-solid border-second_grey/20 border-t-[1px]'>
-                    <a href="#" className='block mt-6 font-semibold'>Реализованные проекты</a>
-                    <a href="#" className='block mt-4 font-semibold'>С нами сотрудничали</a>
-                    <a href="#" className='block mt-4 font-semibold'>Расписание мероприятий</a>
+                    <a href="#cases" className='block mt-6 font-semibold'>Реализованные проекты</a>
+                    <a href="#partners" className='block mt-4 font-semibold'>С нами сотрудничали</a>
+                    <a href="#schedule" className='block mt-4 font-semibold'>Расписание мероприятий</a>
                 </div>
                 <div className='mt-6 border-solid border-second_grey/20 border-t-[1px]'>
-                    <a href="#" className='block mt-6 font-semibold'>Истории успеха</a>
-                    <a href="#" className='block mt-4 font-semibold'>Наша команда</a>
-                    <a href="#" className='block mt-4 font-semibold'>Мероприятия</a>
+                    <a href="#success-stories" className='block mt-6 font-semibold'>Истории успеха</a>
+                    <a href="#our-team" className='block mt-4 font-semibold'>Наша команда</a>
+                    <a href="#events" className='block mt-4 font-semibold'>Мероприятия</a>
                 </div>
             </footer>
         </Section>
