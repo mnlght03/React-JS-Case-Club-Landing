@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ImageCircle from '../ui/ImageCircle';
 import Slider from "../ui/Slider";
 
@@ -6,7 +6,7 @@ export default function PersonsListMobile({ persons, active, setActive }) {
   return (
     <Slider
       classes="flex w-fit gap-4"
-      minOffset={0}
+      minOffset={16}
       maxOffset={60 * persons.length - 16 * (persons.length - 1)}
     >
       {persons.map((person, i) => (
