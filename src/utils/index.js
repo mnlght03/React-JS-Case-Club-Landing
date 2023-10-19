@@ -22,4 +22,8 @@ export const openInNewTab = (url) => {
     window.open(url, '_blank').focus();
 };
 
+export const stripUUID = (value) => {
+    return value.split('.').slice(1).join('.');
+}
+
 export const getApiImageUrl = (url) => process.env.REACT_APP_API_BASE + 'img/' + url;

@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import RoundCard from '../ui/RoundCard';
-import {textDesktop} from '../../utils';
+import {stripUUID, textDesktop} from '../../utils';
 import {ReactComponent as BriefcaseEmoji} from '../../assets/img/icons/briefcase-emoji.svg';
 import {ReactComponent as FireEmoji} from '../../assets/img/icons/fire-emoji.svg';
 import {ReactComponent as HappyEmoji} from '../../assets/img/icons/happy-emoji.svg';
@@ -9,11 +9,30 @@ import {GlobalContext} from '../../context';
 import PillButton from '../ui/PillButton';
 
 import '../../assets/styles/project-description.css';
+import axios from "axios";
 
 export default function ProjectDescription({project}) {
     const {isDesktop} = useContext(GlobalContext);
 
-    const downloadPresentation = () => {
+    const downloadPresentation = async () => {
+        try {
+            const fileResponse = await axios
+                .get(
+                    `${process.env.REACT_APP_API_BASE}img/${project.presentationUrl}`,
+                    {
+                     responseType: 'blob',
+                     timeout: 30000,
+                    }
+                );
+            const tmpLink = document.createElement('a');
+            tmpLink.href = URL.createObjectURL(fileResponse.data);
+            tmpLink.download = stripUUID(project.presentationUrl);
+            tmpLink.target = '_blank'
+            tmpLink.click();
+            tmpLink.remove();
+        } catch(e) {
+            console.log(e);
+        }
     };
 
     return (
