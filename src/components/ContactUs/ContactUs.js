@@ -15,8 +15,8 @@ export default function ContactUs() {
             roundFill="bg-beige"
             id="contact-us"
         >
-            <div className="flex flex-col lg:flex-row gap-6 lg:gap-24 lg:justify-center">
-                <ContactMessages classes={' lg:order-last '}/>
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-24 lg:justify-center p-2">
+                <ContactMessages classes={'lg:order-last'}/>
                 <ContactForm classes={'lg:w-[380px]'} />
             </div>
         </Section>
