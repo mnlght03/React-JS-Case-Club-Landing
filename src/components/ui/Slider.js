@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useSlider} from "../../hooks/useSlider";
 
 function Slider({minOffset, maxOffset, classes = '', children}) {
     const {
         offset,
+        setOffset,
         handleTouchStart,
         handleTouchMove,
         handleTouchEnd,
     } = useSlider(minOffset, maxOffset);
+
+    // useEffect(() => {
+    //     setOffset(minOffset);
+    // }, [children, minOffset, maxOffset]);
 
     return (
         <div

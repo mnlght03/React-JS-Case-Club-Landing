@@ -39,6 +39,7 @@ export function useSlider(minOffset, maxOffset) {
 
     return {
         offset,
+        setOffset,
         handleTouchStart,
         handleTouchMove,
         handleTouchEnd,

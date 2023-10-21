@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import Section from "../ui/Section";
 import Button from "../ui/Button";
 import Popup from "../ui/Popup";
 import MobileEventSelect from "./MobileEventSelect";
@@ -24,11 +23,18 @@ export default function EventsGalleryMobile({events}) {
             >
                 {chosenEvent.name}
             </Button>
+            <Slider classes={'flex gap-4 mt-6'} minOffset={0}
+                    maxOffset={478 * (Math.floor(chosenEvent.photos.length / 4) - 1) + 200}>
+                <EventsGalleryPhotosMobile
+                    photos={chosenEvent.photos.slice(0, MAX_PHOTO_COUNT)}
+                />
+            </Slider>
             {isOpened && (
                 <Popup topRoundMargin bgColor={'bg-light_second_grey'}
                        closeFn={() => setIsOpened(false)}>
-                    <h1 className={'w-full font-semibold text-lg mb-4 px-4'}>Выберите
-                        мероприятие</h1>
+                    <h1 className={'w-full font-semibold text-lg mb-4 px-4'}>
+                        Выберите мероприятие
+                    </h1>
                     <MobileEventSelect
                         events={events}
                         chosen={chosenEvent}
@@ -36,11 +42,6 @@ export default function EventsGalleryMobile({events}) {
                     />
                 </Popup>
             )}
-            <Slider classes={'flex gap-4 mt-6'} minOffset={0}
-                    maxOffset={478 * (Math.floor(chosenEvent.photos.length / 4) - 1) + 200}>
-                <EventsGalleryPhotosMobile
-                    photos={chosenEvent.photos.slice(0, MAX_PHOTO_COUNT)}/>
-            </Slider>
         </>
     );
 }
