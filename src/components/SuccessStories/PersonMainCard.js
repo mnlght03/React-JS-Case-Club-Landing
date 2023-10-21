@@ -7,18 +7,18 @@ import useTagColors from '../../hooks/useTagColors';
 export default function PersonMainCard({person}) {
     const tagColors = useTagColors(person.tagColor);
     return (
-        <div className="w-full items-center lg:w-8/12 flex flex-col lg:flex-row gap-6">
+        <div className="w-full lg:w-8/12 flex flex-col lg:flex-row gap-6">
             <ImageCard
                 imgSrc={person.fullSizePhotoUrl}
-                classes="w-[300px] h-[300px] lg:min-w-[250px] lg:h-[380px]"
+                classes="w-[300px] lg:w-[250px] h-[300px] lg:h-[380px] shrink-0"
             />
-            <div>
+            <div className={''}>
                 <h1
                     className={`font-semibold text-center lg:text-start mt-4 ${mediumTextMobile} ${textDesktop}`}
                 >
                     {person.name}
                 </h1>
-                <div className="mt-4 mb-6 flex justify-around">
+                <div className="mt-4 mb-6 flex">
                     <Button
                         classes=
                             {`text-center w-[160px] lg:w-[210px] font-semibold ${smTextMobile} ${smTextDesktop} ${tagColors[0]}`}
