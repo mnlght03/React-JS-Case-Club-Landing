@@ -11,7 +11,7 @@ export default function MemberCard({member, classes = '', ...props}) {
         <div className={classes}>
             <ImageCard
                 imgSrc={member.profilePhotoUrl}
-                classes="w-[200px] h-[200px] lg:w-[260px] lg:h-[260px] flex"
+                classes="h-[200px] lg:h-[260px] flex"
             >
                 <Button
                     disabled
