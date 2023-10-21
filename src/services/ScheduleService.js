@@ -6,7 +6,6 @@ export default class ScheduleService {
   static async getAll() {
     try {
       const response = await axios.get(ScheduleService.API_URL + 'get-all');
-      console.log(response);
       return response.data.map((item) => ({
         id: item.id,
         name: item.name,

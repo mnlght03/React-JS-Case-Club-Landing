@@ -1,5 +1,4 @@
 export default function useTagColors(color) {
-  console.log(color);
   const colors = ['', ''];
 
   // switch instead of string template for tailwing purgecss

@@ -8,8 +8,6 @@ export default function OurTeamMobile({members = [], classes = ''}) {
             <h1 className="font-semibold text-center text-3xl">Наша команда</h1>
             <Slider
                 classes="flex flex-col gap-6 mt-8"
-                minOffset={0}
-                maxOffset={150 * Math.ceil(members.length / 2) - 16 * Math.floor(members.length / 2)}
             >
                 <div className='flex gap-4'>
                     {[...Array(Math.ceil(members.length / 2))].map((_, i) =>

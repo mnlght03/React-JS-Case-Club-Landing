@@ -17,7 +17,6 @@ export default function Header() {
 
     return (
         <Section
-            wrapperClasses="py-4 px-4 xl:px-48 xl:py-8"
             bgColor="bg-black"
         >
             <header className="flex w-full items-center justify-between">

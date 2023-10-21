@@ -23,8 +23,7 @@ export default function EventsGalleryMobile({events}) {
             >
                 {chosenEvent.name}
             </Button>
-            <Slider classes={'flex gap-4 mt-6'} minOffset={0}
-                    maxOffset={478 * (Math.floor(chosenEvent.photos.length / 4) - 1) + 200}>
+            <Slider classes={'flex gap-4 mt-6'} >
                 <EventsGalleryPhotosMobile
                     photos={chosenEvent.photos.slice(0, MAX_PHOTO_COUNT)}
                 />

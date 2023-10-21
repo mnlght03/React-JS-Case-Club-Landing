@@ -6,8 +6,6 @@ export default function PersonsListMobile({ persons, active, setActive }) {
   return (
     <Slider
       classes="flex w-fit gap-4"
-      minOffset={16}
-      maxOffset={60 * persons.length - 16 * (persons.length - 1)}
     >
       {persons.map((person, i) => (
         <ImageCircle
