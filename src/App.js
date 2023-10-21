@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import Header from './components/Header/Header';
 import {GlobalContext} from './context';
 import {isDesktopPredicate} from './utils';
@@ -15,7 +15,6 @@ import Gallery from './components/Gallery/Events';
 import Faq from './components/FAQ';
 import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
-import {useScrollToSections} from "./hooks/useScrollToSections";
 
 function App() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -30,13 +29,6 @@ function App() {
         return () => window.removeEventListener('resize', updateDesktopState);
     });
 
-    const aboutRef = useRef(null);
-    const casesRef = useRef(null);
-    const currentProjectsRef = useRef(null);
-    const contactRef = useRef(null);
-
-    // useScrollToSections(aboutRef, casesRef, currentProjectsRef, contactRef);
-
     return (
         <GlobalContext.Provider
             value={{
@@ -50,17 +42,17 @@ function App() {
                 startDate={'2012'}
                 endDate={'2023'}
             />
-            <About ref={aboutRef}/>
-            <OurProjects ref={casesRef}/>
+            <About/>
+            <OurProjects/>
             <Partners/>
-            <CurrentProjects ref={currentProjectsRef}/>
+            <CurrentProjects/>
             <EventsSchedule/>
             <SuccessStories/>
             <OurTeam/>
             <Gallery/>
             <ContactUs/>
             <Faq/>
-            <Footer ref={contactRef}/>
+            <Footer/>
         </GlobalContext.Provider>
     );
 }
