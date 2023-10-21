@@ -16,7 +16,7 @@ export default function ContactUs() {
             id="contact-us"
         >
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-24 lg:justify-center p-2">
-                <ContactMessages classes={'lg:order-last'}/>
+                <ContactMessages classes={'items-center justify-center lg:order-last lg:w-7/12'}/>
                 <ContactForm classes={'lg:w-[380px]'} />
             </div>
         </Section>
