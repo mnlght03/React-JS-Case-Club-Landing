@@ -29,7 +29,7 @@ export default function Faq() {
             id="faq"
         >
             <h1
-                className={`xl:mt-16 text-center font-semibold ${bigTextMobile} ${bigTextDesktop}`}
+                className={`lg:mt-16 text-center font-semibold ${bigTextMobile} ${bigTextDesktop}`}
             >
                 FAQ
             </h1>
