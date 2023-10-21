@@ -18,7 +18,7 @@ export default function Events() {
 
     return (
         events.length > 0 && (
-            <Section bgColor="bg-beige" id="events">
+            <Section bgColor="bg-beige" id="events" classes={isDesktop ? '' : 'w-screen'}>
             {isDesktop
                 ? <EventsGalleryDesktop events={events}/>
                 : <EventsGalleryMobile events={events}/>

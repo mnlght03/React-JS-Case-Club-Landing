@@ -14,16 +14,19 @@ export default function EventsGalleryMobile({events}) {
 
     return (
         <>
-            <h1 className={`mt-8 font-semibold text-center w-full text-3xl`}>Мероприятия</h1>
-            <Button
-                classes={
-                    'py-5 px-8 bg-grey_blue mt-8 w-full rounded-3xl font-semibold'
-                }
-                onClick={() => setIsOpened(!isOpened)}
-            >
-                {chosenEvent.name}
-            </Button>
-            <Slider classes={'flex gap-4 mt-6'} >
+            <div className={'px-4'}>
+                <h1 className={`mt-8 font-semibold text-center w-full text-3xl`}>Мероприятия</h1>
+                <Button
+                    classes={
+                        'py-5 px-8 bg-grey_blue mt-8 w-full rounded-3xl font-semibold'
+                    }
+                    onClick={() => setIsOpened(!isOpened)}
+                >
+                    {chosenEvent.name}
+                </Button>
+            </div>
+
+            <Slider classes={'flex gap-2 mt-6 px-4'}>
                 <EventsGalleryPhotosMobile
                     photos={chosenEvent.photos.slice(0, MAX_PHOTO_COUNT)}
                 />

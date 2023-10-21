@@ -9,7 +9,7 @@ export default function OurTeamDesktop({ members = [], classes = '' }) {
   const pagesTotal = useMemo(() => Math.round(members.length / 8), [members]);
 
   return (
-    <div>
+    <>
       <div className={'flex items-center mt-16 ' + classes}>
         <h1 className={`font-semibold ${bigTextDesktop}`}>Наша команда</h1>
         <ScrollCounter
@@ -20,6 +20,6 @@ export default function OurTeamDesktop({ members = [], classes = '' }) {
         />
       </div>
       <TeamGalleryDesktop members={members} />
-    </div>
+    </>
   );
 }

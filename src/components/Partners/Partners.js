@@ -31,8 +31,9 @@ export default function Partners() {
     }, [partners]);
 
     return (
-        <Section bgColor="bg-black" id="partners">
-            <div className="flex items-center justify-between mt-6 xl:mt-8">
+        <Section bgColor="bg-black" id="partners" classes={'w-screen'}>
+            <div
+                className="flex items-center justify-between px-4 mt-6 xl:mt-8">
                 <h1 className={`text-white font-semibold ${mediumTextMobile} ${bigTextDesktop}`}>
                     С нами сотрудничали
                 </h1>
@@ -45,14 +46,19 @@ export default function Partners() {
                             partners={partnersSplit[0]}
                             classes="mt-16"
                         />
-                        <PartnersSlider partners={partnersSplit[1]}
-                                        classes='mt-4'/>
+                        <PartnersSlider
+                            partners={partnersSplit[1]}
+                            classes='mt-4'
+                        />
                     </>
                 )
-                : (<PartnersSliderMobile partners={partners}
-                                         classes='mt-4 mb-4'/>)
+                : (
+                    <PartnersSliderMobile
+                        partners={partners}
+                        classes='mt-4 mb-4 px-4'
+                    />
+                )
             }
-
         </Section>
     );
 }

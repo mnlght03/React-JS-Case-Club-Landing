@@ -8,6 +8,7 @@ function Slider({children, classes}) {
         >
             {children}
         </div>
+
     );
 }
 

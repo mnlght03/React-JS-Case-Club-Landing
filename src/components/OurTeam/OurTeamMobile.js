@@ -4,28 +4,30 @@ import Slider from "../ui/Slider";
 
 export default function OurTeamMobile({members = [], classes = ''}) {
     return (
-        <div>
-            <h1 className="font-semibold text-center text-3xl">Наша команда</h1>
+        <>
+            <h1 className="font-semibold text-center text-3xl mt-8">Наша команда</h1>
             <Slider
-                classes="flex flex-col gap-6 mt-8"
+                classes="mt-8"
             >
-                <div className='flex gap-4'>
-                    {[...Array(Math.ceil(members.length / 2))].map((_, i) =>
-                        <MemberCard
-                            member={members[i]}
-                            key={members[i].id ?? i}
-                        />)}
-                </div>
-                <div className='flex gap-4'>
-                    {[...Array(Math.floor(members.length / 2))]
-                        .map((_, i) => i + Math.ceil(members.length / 2))
-                        .map((i) =>
-                            (<MemberCard
+                <div className={'w-fit px-4'}>
+                    <div className='flex gap-4'>
+                        {[...Array(Math.ceil(members.length / 2))].map((_, i) =>
+                            <MemberCard
                                 member={members[i]}
                                 key={members[i].id ?? i}
-                            />))}
+                            />)}
+                    </div>
+                    <div className='flex gap-4 mt-6'>
+                        {[...Array(Math.floor(members.length / 2))]
+                            .map((_, i) => i + Math.ceil(members.length / 2))
+                            .map((i) =>
+                                (<MemberCard
+                                    member={members[i]}
+                                    key={members[i].id ?? i}
+                                />))}
+                    </div>
                 </div>
             </Slider>
-        </div>
+        </>
     );
 }

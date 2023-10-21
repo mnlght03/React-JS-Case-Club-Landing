@@ -5,7 +5,7 @@ import Slider from "../ui/Slider";
 export default function PersonsListMobile({ persons, active, setActive }) {
   return (
     <Slider
-      classes="flex w-fit gap-4"
+      classes="flex gap-4"
     >
       {persons.map((person, i) => (
         <ImageCircle
