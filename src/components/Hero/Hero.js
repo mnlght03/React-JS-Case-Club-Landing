@@ -32,9 +32,9 @@ export default function Hero() {
                     </div>
                 </RoundCard>
                 <div className="w-full lg:w-6/12 flex mt-4 lg:ml-4 ">
-                    <a href="#current-projects" className={'w-6/12'}>
+                    <a href="#current-projects" className={'w-6/12 min-h-[150px]'}>
                         <RoundCard
-                            classes="hero-projects bg-grey flex flex-col min-h-[150px]"
+                            classes="hero-projects bg-grey flex flex-col h-full"
                         >
                             <ArrowRightIcon
                                 style={{
@@ -51,9 +51,9 @@ export default function Hero() {
                             </p>
                         </RoundCard>
                     </a>
-                    <a href="#contact-us" className={'w-6/12'}>
+                    <a href="#contact-us" className={'w-6/12 min-h-[150px]'}>
                         <RoundCard
-                            classes="hero-contacts bg-green flex flex-col ml-4 min-h-[150px]"
+                            classes="hero-contacts bg-green flex flex-col ml-4 h-full"
                         >
                             <PlusIcon
                                 width={isDesktop ? 40 : 20}
