@@ -1,7 +1,7 @@
 import React from 'react';
 import { openInNewTab } from '../../utils';
 
-export default function NewTabLink({ url, children }) {
+export default function NewTabLink({ url, children, ...props }) {
   return (
     <a
       href={url}
@@ -9,6 +9,7 @@ export default function NewTabLink({ url, children }) {
         e.preventDefault();
         openInNewTab(url);
       }}
+        {...props}
     >
       {children}
     </a>

@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import RoundCard from '../ui/RoundCard';
 import {stripUUID, textDesktop} from '../../utils';
 import {ReactComponent as BriefcaseEmoji} from '../../assets/img/icons/briefcase-emoji.svg';
@@ -10,6 +10,7 @@ import PillButton from '../ui/PillButton';
 
 import '../../assets/styles/project-description.css';
 import axios from "axios";
+import NewTabLink from "../ui/NewTabLink";
 
 export default function ProjectDescription({project}) {
     const {isDesktop} = useContext(GlobalContext);
@@ -35,6 +36,10 @@ export default function ProjectDescription({project}) {
         }
     };
 
+    useEffect(() => {
+        console.log(project)
+    }, []);
+
     return (
         <div className="flex h-max flex-col lg:flex-row gap-4 mt-12">
             <RoundCard classes="min-h-full w-full lg:py-12 lg:w-1/2 bg-white flex flex-col justify-between">
@@ -56,7 +61,12 @@ export default function ProjectDescription({project}) {
                 {isDesktop
                     ? (<div className="flex justify-between mt-4">
                             <PillButton classes="bg-blue border-none">
-                                <span className="text-white font-semibold">Подать заявку</span>
+                                <NewTabLink
+                                    url={project.registrationLink}
+                                    className="text-white font-semibold"
+                                >
+                                    Подать заявку
+                                </NewTabLink>
                             </PillButton>
                             <PillButton
                                 onClick={downloadPresentation}
@@ -67,7 +77,12 @@ export default function ProjectDescription({project}) {
                             </PillButton>
                         </div>)
                     : (<PillButton classes="bg-blue border-none mt-4">
-                            <span className="text-white font-semibold">Зарегистрироваться</span>
+                            <NewTabLink
+                                url={project.registrationLink}
+                                className="text-white font-semibold"
+                            >
+                                Зарегистрироваться
+                            </NewTabLink>
                         </PillButton>)
                 }
             </RoundCard>
