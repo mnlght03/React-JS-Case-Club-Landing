@@ -14,6 +14,7 @@ export default class CurrentProjectService {
                 textTwo: item.secondPlateText,
                 textThree: item.thirdPlateText,
                 presentationUrl: item.presentationFileUrl,
+                registrationLink: item.registrationLink,
                 format: item.projectFormat,
                 startDate: item.startDate,
             }));

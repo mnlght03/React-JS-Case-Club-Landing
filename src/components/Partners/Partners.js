@@ -7,6 +7,8 @@ import PartnersSlider from './PartnersSlider';
 import PartnerService from '../../services/PartnerService';
 import PartnersSliderMobile from "./PartnersSliderMobile";
 
+import '../../assets/styles/partners.css';
+
 export default function Partners() {
     const {isDesktop} = useContext(GlobalContext);
     const [partners, setPartners] = useState([]);
@@ -31,6 +33,7 @@ export default function Partners() {
     }, [partners]);
 
     return (
+        <>
         <Section bgColor="bg-black" id="partners" classes={'w-screen'}>
             <div
                 className="flex items-center justify-between px-4 mt-6 xl:mt-8">
@@ -39,26 +42,39 @@ export default function Partners() {
                 </h1>
                 {isDesktop && <PartnersButton/>}
             </div>
+        </Section>
             {isDesktop
                 ? (
-                    <>
-                        <PartnersSlider
-                            partners={partnersSplit[0]}
-                            classes="mt-16"
-                        />
-                        <PartnersSlider
-                            partners={partnersSplit[1]}
-                            classes='mt-4'
-                        />
-                    </>
+                    <div className={'bg-black pb-12'}>
+                        <div className="partners-slide flex gap-4">
+                            <PartnersSlider
+                                partners={partnersSplit[0]}
+                                classes="partners-first"
+                            />
+                            <PartnersSlider
+                                partners={partnersSplit[0]}
+                                classes="partners-first"
+                            />
+                        </div>
+                        <div className={'partners-slide flex gap-4'}>
+                            <PartnersSlider
+                                partners={partnersSplit[1]}
+                                classes='mt-4 partners-second'
+                            />
+                            <PartnersSlider
+                                partners={partnersSplit[1]}
+                                classes='mt-4 partners-second'
+                            />
+                        </div>
+                    </div>
                 )
                 : (
                     <PartnersSliderMobile
                         partners={partners}
-                        classes='mt-4 mb-4 px-4'
+                        classes='p-4 bg-black'
                     />
                 )
             }
-        </Section>
+        </>
     );
 }

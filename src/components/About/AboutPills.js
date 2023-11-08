@@ -5,7 +5,7 @@ export default function AboutPills({ items, classes = '' }) {
     items = items.length > 8 ? items : [...items, ...items];
 
     return (
-        <div className={"flex justify-center gap-4 h-max max-w-[2400px] " + classes}>
+        <div className={"flex gap-4 h-max " + classes}>
             {items.map((item, i) => (
                 <PillButton
                     classes={

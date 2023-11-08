@@ -10,7 +10,7 @@ import { GlobalContext } from '../../context';
 import AboutSliderCounter from './AboutSliderCounter';
 import AboutSliderOptions from './AboutSliderOptions';
 
-export default function AboutSlider() {
+export default function AboutSlider({...props}) {
     const { isDesktop } = useContext(GlobalContext);
 
     const [current, setCurrent] = useState(0);
@@ -18,7 +18,7 @@ export default function AboutSlider() {
     const options = ['кейс-чемпионаты', 'образовательные курсы', 'мощный старт карьеры', 'лекции от экспертов'];
 
     return (
-        <div>
+        <div {...props}>
             <h1 className={`text-white  ${bigTextMobile} ${headingTextDesktop}`}>
                 Case Club - это
             </h1>

@@ -1,0 +1,35 @@
+@keyframes slide-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.pills-first {
+    animation: 15s slide-left infinite linear;
+}
+
+.pills-second {
+    animation: 15s slide-right infinite linear;
+}
+
+.pills-slide:hover .pills-first,
+.pills-slide:hover .pills-second
+{
+    animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
